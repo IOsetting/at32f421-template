@@ -47,7 +47,8 @@ TGT_ASFLAGS += $(ARCH_FLAGS)
 TGT_LDFLAGS += $(ARCH_FLAGS) -specs=nano.specs -specs=nosys.specs -static -lc -lm \
 				-Wl,-Map=$(BDIR)/$(PROJECT).map \
 				-Wl,--gc-sections \
-				-Wl,--print-memory-usage
+				-Wl,--print-memory-usage \
+				-Wl,--no-warn-rwx-segments
 
 ifeq ($(ENABLE_PRINTF_FLOAT),y)
 TGT_LDFLAGS	+= -u _printf_float
