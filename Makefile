@@ -52,13 +52,13 @@ INCLUDES	:= Libraries/cmsis/cm4/core_support \
 			User
 
 ifeq ($(USE_FREERTOS),y)
-CDIRS		+= Libraries/FreeRTOS \
-			Libraries/FreeRTOS/portable/GCC/ARM_CM3
+CDIRS		+= Middlewares/FreeRTOS \
+			Middlewares/FreeRTOS/portable/GCC/ARM_CM3
 
-CFILES		+= Libraries/FreeRTOS/portable/MemMang/heap_4.c
+CFILES		+= Middlewares/FreeRTOS/portable/MemMang/heap_4.c
 
-INCLUDES	+= Libraries/FreeRTOS/include \
-			Libraries/FreeRTOS/portable/GCC/ARM_CM3
+INCLUDES	+= Middlewares/FreeRTOS/include \
+			Middlewares/FreeRTOS/portable/GCC/ARM_CM3
 endif
 
 include ./rules.mk
