@@ -1,0 +1,125 @@
+<DataBase>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421C8T7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K8T7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K8U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K8U7-4" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421F8U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421F8P7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421G8U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421PF8P7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F4212C8T7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421C8W" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421C8W-YY" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421C6T7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K6T7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K6U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K6U7-4" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421F6U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421F6P7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421G6U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421C4T7" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K4T7" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K4U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421K4U7-4" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421F4U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421F4P7" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421G4U7" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421PF4P7" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421_APMODE_64" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00010000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_64.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+    <FlashBankInfo Name="Flash Boot Memory" BaseAddr="0x1FFFE400" MaxSize="0x00001000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_BOOTMEM_AP.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421_APMODE_32" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00008000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_32.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+    <FlashBankInfo Name="Flash Boot Memory" BaseAddr="0x1FFFE400" MaxSize="0x00001000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_BOOTMEM_AP.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421_APMODE_16" WorkRAMAddr="0x20000000" WorkRAMSize="0x002000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash Bank1" BaseAddr="0x08000000" MaxSize="0x00004000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_16.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+    <FlashBankInfo Name="Flash Boot Memory" BaseAddr="0x1FFFE400" MaxSize="0x00001000" Loader="Devices/ArteryTek/AT32FLM/AT32F421_BOOTMEM_AP.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+  <Device>
+    <ChipInfo Vendor="ArteryTek" Name="AT32F421USD" WorkRAMAddr="0x20000000" WorkRAMSize="0x004000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/ArteryTek/AT32FLM/AT32F4xx.JLinkScript" />
+    <FlashBankInfo Name="Flash USD" BaseAddr="0x1FFFF800" MaxSize="0x200" Loader="Devices/ArteryTek/AT32FLM/AT32F421_USD.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+</DataBase>
