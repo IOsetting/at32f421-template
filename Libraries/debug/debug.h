@@ -16,6 +16,7 @@ extern "C" {
 #define PRINT_UART_TX_PIN_SOURCE         GPIO_PINS_SOURCE9
 #define PRINT_UART_TX_PIN_MUX_NUM        GPIO_MUX_1
 
+void uart_print_init(uint32_t baudrate);
 
 #ifdef __cplusplus
 }

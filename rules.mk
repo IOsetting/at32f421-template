@@ -101,5 +101,5 @@ flash:
 ifeq ($(FLASH_PROGRM),jlink)
 	$(JLINKEXE) -device $(JLINK_DEVICE) -if swd -speed 4000 -CommanderScript $(TOP)/Misc/flash.jlink
 else
-    @echo "FLASH_PROGRM is invalid\n"
+	@echo "FLASH_PROGRM is invalid\n"
 endif

@@ -32,6 +32,6 @@
             "type": "shell",
             "command": "make clean",
             "problemMatcher": []
-        },
+        }
     ]
 }
