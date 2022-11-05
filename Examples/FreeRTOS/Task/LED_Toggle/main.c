@@ -143,10 +143,14 @@ int main(void)
 {
   BaseType_t xReturned;
 
+  nvic_priority_group_config(NVIC_PRIORITY_GROUP_4);
+
   system_clock_config();
   at32_led_init(LED2);
   at32_led_init(LED3);
   at32_led_init(LED4);
+
+  taskENTER_CRITICAL();
 
   xReturned = xTaskCreate(
         task1,                      // Task function point
@@ -172,6 +176,8 @@ int main(void)
   {
       while (1);
   }
+
+  taskEXIT_CRITICAL();
 
   /* Start the scheduler. */
   vTaskStartScheduler();
