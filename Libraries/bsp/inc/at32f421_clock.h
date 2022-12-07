@@ -36,7 +36,7 @@ extern "C" {
 #include "at32f421.h"
 
 /* exported functions ------------------------------------------------------- */
-void system_clock_config(void);
+void sclk_120m_hext_config(void);
 
 #ifdef __cplusplus
 }

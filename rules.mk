@@ -35,12 +35,12 @@ ARCH_FLAGS	:= -mthumb -mcpu=cortex-m4
 #  -g: system’s native format, -g0:off, -g/g1,-g2,-g3 -> more verbosely
 #  -ggdb: for gdb, -ggdb0:off, -ggdb/ggdb1,-ggdb2,-ggdb3 -> more verbosely
 #  -gdwarf: in DWARF format, -gdwarf-2,-gdwarf-3,-gdwarf-4,-gdwarf-5
-DEBUG_FLAGS ?= -gdwarf-2
+DEBUG_FLAGS ?= -gdwarf-3
 
 # c flags
 OPT			?= -O0
 CSTD		?= -std=c99
-TGT_CFLAGS 	+= $(ARCH_FLAGS) $(DEBUG_FLAGS) $(OPT) $(CSTD) $(addprefix -D, $(LIB_FLAGS)) -Wall
+TGT_CFLAGS 	+= $(ARCH_FLAGS) $(DEBUG_FLAGS) $(OPT) $(CSTD) $(addprefix -D, $(LIB_FLAGS)) -Wall -ffunction-sections -fdata-sections
 
 # asm flags
 TGT_ASFLAGS += $(ARCH_FLAGS) $(DEBUG_FLAGS) $(OPT) -Wa,--warn
@@ -62,7 +62,7 @@ TGT_INCFLAGS := $(addprefix -I $(TOP)/, $(INCLUDES))
 
 .PHONY: all clean flash echo
 
-all: $(BDIR)/$(PROJECT).elf $(BDIR)/$(PROJECT).bin
+all: $(BDIR)/$(PROJECT).elf $(BDIR)/$(PROJECT).bin $(BDIR)/$(PROJECT).hex
 
 # for debug
 echo:
@@ -94,12 +94,19 @@ $(BDIR)/$(PROJECT).elf: $(OBJS) $(TOP)/$(LDSCRIPT)
 	@printf "  OBJCP\t$@\n"
 	$(Q)$(OBJCOPY) -O binary  $< $@
 
+%.hex: %.elf
+	@printf "  OBJCP\t$@\n"
+	$(Q)$(OBJCOPY) -O ihex  $< $@
+
 clean:
 	rm -rf $(BDIR)/*
 
 flash:
 ifeq ($(FLASH_PROGRM),jlink)
 	$(JLINKEXE) -device $(JLINK_DEVICE) -if swd -speed 4000 -CommanderScript $(TOP)/Misc/flash.jlink
+else ifeq ($(FLASH_PROGRM),pyocd)
+	$(PYOCD_EXE) erase -c -t $(PYOCD_DEVICE) --config $(TOP)/Misc/pyocd.yaml
+	$(PYOCD_EXE) load $(BDIR)/$(PROJECT).hex -t $(PYOCD_DEVICE) --config $(TOP)/Misc/pyocd.yaml
 else
 	@echo "FLASH_PROGRM is invalid\n"
 endif

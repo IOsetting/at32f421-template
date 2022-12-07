@@ -10,8 +10,8 @@ BUILD_DIR		= Build
 ENABLE_PRINTF_FLOAT	?= n
 # Build with FreeRTOS, y:yes, n:no
 USE_FREERTOS	?= n
-# Programmer, jlink
-FLASH_PROGRM	?= jlink
+# Programmer, jlink or pyocd
+FLASH_PROGRM	?= pyocd
 
 
 ##### Toolchains #######
@@ -20,9 +20,12 @@ FLASH_PROGRM	?= jlink
 #ARM_TOOCHAIN	?= /opt/gcc-arm/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi/bin
 ARM_TOOCHAIN	?= /opt/gcc-arm/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi/bin
 
-# path to JLinkExe (or should be specified in PATH)
+# path to JLinkExe
 JLINKEXE		?= /opt/SEGGER/JLink/JLinkExe
 JLINK_DEVICE	?= AT32F421C8T7
+# path to PyOCD
+PYOCD_EXE		?= pyocd
+PYOCD_DEVICE	?= _at32f421c8t7
 
 
 ##### Paths ############
@@ -33,10 +36,11 @@ LDSCRIPT		= Libraries/cmsis/cm4/device_support/startup/gcc/linker/AT32F421x8_FLA
 LIB_FLAGS		= USE_STDPERIPH_DRIVER AT32F421C8T7
 
 # C source folders
-CDIRS	:= Libraries/cmsis/cm4/device_support \
+CDIRS	:= User \
+		Libraries/cmsis/cm4/device_support \
 		Libraries/drivers/src \
-		Libraries/debug \
-		User
+		Libraries/bsp/src
+
 # C source files (if there are any single ones)
 CFILES := 
 
@@ -50,7 +54,7 @@ INCLUDES	:= User \
 			Libraries/cmsis/cm4/core_support \
 			Libraries/cmsis/cm4/device_support \
 			Libraries/drivers/inc \
-			Libraries/debug
+			Libraries/bsp/inc
 
 ifeq ($(USE_FREERTOS),y)
 CDIRS		+= Middlewares/FreeRTOS \

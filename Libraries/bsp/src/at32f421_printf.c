@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <errno.h>
-#include "debug.h"
+#include "at32f421_printf.h"
 
 
 /* support printf function, usemicrolib is unnecessary */

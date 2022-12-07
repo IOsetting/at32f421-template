@@ -45,7 +45,7 @@
   * @param  none
   * @retval none
   */
-void system_clock_config(void)
+void sclk_120m_hext_config(void)
 {
   /* config flash psr register */
   flash_psr_set(FLASH_WAIT_CYCLE_3);
