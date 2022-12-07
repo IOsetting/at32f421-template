@@ -7,7 +7,9 @@ BUILD_DIR		= Build
 ##### Options #####
 
 # Enable printf float %f support, y:yes, n:no
-ENABLE_PRINTF_FLOAT	?= n
+ENABLE_PRINTF_FLOAT	?= y
+# Build with CMSIS DSP functions, y:yes, n:no
+USE_DSP			?= y
 # Build with FreeRTOS, y:yes, n:no
 USE_FREERTOS	?= n
 # Programmer, jlink or pyocd
@@ -64,6 +66,25 @@ CFILES		+= Middlewares/FreeRTOS/portable/MemMang/heap_4.c
 
 INCLUDES	+= Middlewares/FreeRTOS/include \
 			Middlewares/FreeRTOS/portable/GCC/ARM_CM3
+endif
+
+ifeq ($(USE_DSP),y)
+CFILES 		+= Libraries/cmsis/dsp/Source/BasicMathFunctions/BasicMathFunctions.c \
+		Libraries/cmsis/dsp/Source/BayesFunctions/BayesFunctions.c \
+		Libraries/cmsis/dsp/Source/CommonTables/CommonTables.c \
+		Libraries/cmsis/dsp/Source/ComplexMathFunctions/ComplexMathFunctions.c \
+		Libraries/cmsis/dsp/Source/ControllerFunctions/ControllerFunctions.c \
+		Libraries/cmsis/dsp/Source/DistanceFunctions/DistanceFunctions.c \
+		Libraries/cmsis/dsp/Source/FastMathFunctions/FastMathFunctions.c \
+		Libraries/cmsis/dsp/Source/FilteringFunctions/FilteringFunctions.c \
+		Libraries/cmsis/dsp/Source/MatrixFunctions/MatrixFunctions.c \
+		Libraries/cmsis/dsp/Source/StatisticsFunctions/StatisticsFunctions.c \
+		Libraries/cmsis/dsp/Source/SupportFunctions/SupportFunctions.c \
+		Libraries/cmsis/dsp/Source/SVMFunctions/SVMFunctions.c \
+		Libraries/cmsis/dsp/Source/TransformFunctions/TransformFunctions.c
+
+INCLUDES	+= Libraries/cmsis/dsp/PrivateInclude \
+			Libraries/cmsis/dsp/ComputeLibrary/Include
 endif
 
 include ./rules.mk

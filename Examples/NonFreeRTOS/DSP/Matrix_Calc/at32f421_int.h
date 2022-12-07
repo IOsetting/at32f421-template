@@ -1,9 +1,9 @@
 /**
   **************************************************************************
-  * @file     at32f421_clock.h
+  * @file     at32f421_int.h
   * @version  v2.0.9
   * @date     2022-09-28
-  * @brief    header file of clock program
+  * @brief    header file of main interrupt service routines.
   **************************************************************************
   *                       Copyright notice & Disclaimer
   *
@@ -25,8 +25,8 @@
   */
 
 /* define to prevent recursive inclusion -------------------------------------*/
-#ifndef __AT32F421_CLOCK_H
-#define __AT32F421_CLOCK_H
+#ifndef __AT32F421_INT_H
+#define __AT32F421_INT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -35,12 +35,24 @@ extern "C" {
 /* includes ------------------------------------------------------------------*/
 #include "at32f421.h"
 
+/* exported types ------------------------------------------------------------*/
+/* exported constants --------------------------------------------------------*/
+/* exported macro ------------------------------------------------------------*/
 /* exported functions ------------------------------------------------------- */
-void system_clock_config(void);
+
+void NMI_Handler(void);
+void HardFault_Handler(void);
+void MemManage_Handler(void);
+void BusFault_Handler(void);
+void UsageFault_Handler(void);
+void SVC_Handler(void);
+void DebugMon_Handler(void);
+void PendSV_Handler(void);
+void SysTick_Handler(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __AT32F421_CLOCK_H */
+#endif
 

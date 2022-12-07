@@ -25,6 +25,7 @@
   */
 
 #include "at32f421_clock.h"
+#include "at32f421_delay.h"
 
 typedef enum
 {
@@ -32,8 +33,6 @@ typedef enum
   LED3                                   = 1,
   LED4                                   = 2
 } led_type;
-
-#define STEP_DELAY_MS                    50
 
 #define LED_NUM                          3
 
@@ -49,79 +48,10 @@ typedef enum
 #define LED4_GPIO                        GPIOC
 #define LED4_GPIO_CRM_CLK                CRM_GPIOC_PERIPH_CLOCK
 
-/* delay variable */
-static __IO uint32_t fac_us;
-static __IO uint32_t fac_ms;
 
 gpio_type *led_gpio_port[LED_NUM]        = {LED2_GPIO, LED3_GPIO, LED4_GPIO};
 uint16_t led_gpio_pin[LED_NUM]           = {LED2_PIN, LED3_PIN, LED4_PIN};
 crm_periph_clock_type led_gpio_crm_clk[LED_NUM] = {LED2_GPIO_CRM_CLK, LED3_GPIO_CRM_CLK, LED4_GPIO_CRM_CLK};
-
-/**
-  * @brief  initialize delay function
-  * @param  none
-  * @retval none
-  */
-void delay_init()
-{
-  /* configure systick */
-  systick_clock_source_config(SYSTICK_CLOCK_SOURCE_AHBCLK_NODIV);
-  fac_us = system_core_clock / (1000000U);
-  fac_ms = fac_us * (1000U);
-}
-
-
-/**
-  * @brief  inserts a delay time.
-  * @param  nus: specifies the delay time length, in microsecond.
-  * @retval none
-  */
-void delay_us(uint32_t nus)
-{
-  uint32_t temp = 0;
-  SysTick->LOAD = (uint32_t)(nus * fac_us);
-  SysTick->VAL = 0x00;
-  SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk ;
-  do
-  {
-    temp = SysTick->CTRL;
-  }while((temp & 0x01) && !(temp & (1 << 16)));
-
-  SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
-  SysTick->VAL = 0x00;
-}
-
-/**
-  * @brief  inserts a delay time.
-  * @param  nms: specifies the delay time length, in milliseconds.
-  * @retval none
-  */
-void delay_ms(uint16_t nms)
-{
-  uint32_t temp = 0;
-  while(nms)
-  {
-    if(nms > STEP_DELAY_MS)
-    {
-      SysTick->LOAD = (uint32_t)(STEP_DELAY_MS * fac_ms);
-      nms -= STEP_DELAY_MS;
-    }
-    else
-    {
-      SysTick->LOAD = (uint32_t)(nms * fac_ms);
-      nms = 0;
-    }
-    SysTick->VAL = 0x00;
-    SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
-    do
-    {
-      temp = SysTick->CTRL;
-    }while((temp & 0x01) && !(temp & (1 << 16)));
-
-    SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
-    SysTick->VAL = 0x00;
-  }
-}
 
 /**
   * @brief  configure led gpio
@@ -171,7 +101,7 @@ void at32_led_toggle(led_type led)
   */
 int main(void)
 {
-  system_clock_config();
+  sclk_120m_hext_config();
 
   delay_init();
 

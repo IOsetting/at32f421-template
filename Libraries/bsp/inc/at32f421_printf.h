@@ -5,6 +5,7 @@
 extern "C" {
 #endif
 
+#include <stdio.h>
 #include "at32f421.h"
 
 /**************** define print uart ******************/

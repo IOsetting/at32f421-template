@@ -1,6 +1,5 @@
 #include <sys/stat.h>
 #include <unistd.h>
-#include <stdio.h>
 #include <errno.h>
 #include "at32f421_printf.h"
 
